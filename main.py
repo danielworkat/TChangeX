@@ -13,7 +13,7 @@ CHANNEL_ID = os.getenv("CHANNEL_ID")  # Telegram channel username (e.g., "@YourC
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
 # Admin user ID (replace with your Telegram ID)
-ADMIN_ID = 123456789  # Replace with your Telegram user ID
+ADMIN_ID =7796887669  # Replace with your Telegram user ID
 
 def start(update: Update, context: CallbackContext):
     user_id = update.message.from_user.id
