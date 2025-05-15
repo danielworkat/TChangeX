@@ -22,7 +22,23 @@ load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = os.getenv("CHANNEL_ID")  # Use numeric channel ID (e.g., -1001234567890)
 ADMIN_ID = int(os.getenv("ADMIN_ID"))  # Your Telegram user ID
+from utils import resize_image, is_valid_image
 
+# ইমেজ প্রসেসিং
+success = resize_image(
+    input_path="input.jpg",
+    output_path="output.webp",
+    size=(800, 800),
+    quality=90,
+    format="WEBP",
+    preserve_metadata=True
+)
+
+# ইমেজ ভ্যালিডেশন
+if is_valid_image("user_upload.jpg"):
+    print("Valid image file")
+else:
+    print("Corrupted image file")
 # Initialize logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
