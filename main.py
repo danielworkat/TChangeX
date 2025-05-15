@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv
+import logging 
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from database import add_user, approve_user, is_approved, get_all_users
@@ -11,6 +11,8 @@ CHANNEL_ID = os.getenv("CHANNEL_ID")
 load_dotenv() # Telegram channel username (e.g., "@YourChannel")
 
 # Set up logging
+import os
+from dotenv import load_dotenv
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 
 # Admin user ID (replace with your Telegram ID)
