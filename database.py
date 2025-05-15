@@ -1,6 +1,11 @@
+# database.py
+
 import os
+from dotenv import load_dotenv
 import pymongo
 
+
+load_dotenv() # ✅
 # Load MongoDB URL from environment variables
 MONGO_URL = os.getenv("MONGO_URL")
 
